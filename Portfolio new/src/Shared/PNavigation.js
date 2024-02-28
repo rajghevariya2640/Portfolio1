@@ -27,7 +27,8 @@ const NavigationWrapper = styled(PStack)(({ theme }) => ({
       cursor: 'pointer',
       backgroundColor: theme.palette.primary.main,
       '& svg': {
-        fill: theme.palette.primary.main
+        fill: theme.palette.primary.main,
+        stroke: theme.palette.white.main,
       }
     }
   }

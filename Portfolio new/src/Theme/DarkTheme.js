@@ -7,12 +7,14 @@ export const dark555 = '#555'
 export const dark666 = '#666'
 export const greyd5 = '#d5d5d5'
 
+const primaryColor = JSON.parse(localStorage.getItem("primaryColor"));
+
 export const darkTheme = createTheme({
 
   palette: {
     mode: 'dark',
     primary: {
-      main: '#0099e5'
+      main: primaryColor || '#0099e5'
     },
     white: {
       main: '#fff'

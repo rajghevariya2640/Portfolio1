@@ -51,7 +51,7 @@ const SideBarWrapper = styled(PStack)(({ theme }) => ({
         borderBottom: `1px solid ${theme.palette.border.main50}`,
         padding: "12px 5px",
         fontWeight: 500,
-        "&:first-child": {
+        "&:first-of-type": {
           borderTop: `1px solid ${theme.palette.border.main50}`,
         },
         "&::after": {

@@ -1,14 +1,16 @@
-import { createTheme } from '@mui/material'
-import { dark222 } from './DarkTheme'
-import {theme} from "./Theme.js"
+import { createTheme } from '@mui/material';
+import { dark222 } from './DarkTheme';
+import { theme } from "./Theme.js";
 const white = '#fff'
+
+const primaryColor = JSON.parse(localStorage.getItem("primaryColor"));
 
 export const lightTheme = createTheme({
 
   palette: {
     mode: 'light',
     primary: {
-      main: '#0099e5'
+      main: primaryColor || '#0099e5'
     },
     white: {
       main: '#fff'
@@ -52,7 +54,7 @@ export const lightTheme = createTheme({
       styleOverrides: {
         body: {
           backgroundColor: '#f5f5f5',
-          color: '#222',
+          color: '#666',
           overflowX: 'hidden'
         }
       }

@@ -6,7 +6,7 @@ import PGridItem from '../../Shared/PGridItem'
 import PTypography from '../../Shared/PTypography'
 
 const BoxMain = styled(PStack)(({ theme }) => ({
-
+  marginTop: '40px',
 }))
 
 const SingleBox = ({boxDetail}) => {
@@ -14,20 +14,30 @@ const SingleBox = ({boxDetail}) => {
     <BoxMain>
       {boxDetail.map((boxData, boxIndex) => {
          return (
-           <PGridContainer key={boxIndex}>
-             <PGridItem md={4} sx={{
+           <PGridContainer key={boxIndex}
+             sx={{
+               '&:last-child': {
+                 '& .MuiGrid-item': {
+                   '&::after': {
+                   height: 'calc(100% + 15px)'
+                 },
+               },
+             },
+           }}>
+             <PGridItem md={3.5} sx={{
                display: 'flex',
                justifyContent: "end",
                paddingRight: '25px',
              }}>
                <PStack alignItems='end'>
                  <PTypography sx={{ fontSize: 14, fontWeight: 600, color: (theme) => theme.palette.text.main50 }}>{ boxData?.year}</PTypography>
-                 <PTypography sx={{fontSize: 12, fontWeight: 500, color: (theme) => theme.palette.text.mainAAA}}>{boxData?.university}</PTypography>
+                 <PTypography sx={{fontSize: 12, fontWeight: 500, color: (theme) => theme.palette.text.mainAAA}}>{boxData?.univercity}</PTypography>
                </PStack>
              </PGridItem>
-             <PGridItem md={8} className="" sx={{
+             <PGridItem md={8.5} className="" sx={{
                position :'relative',
                paddingLeft: '25px',
+               marginBottom :'30px',
                '&::after': {
                  content: "''",
                  position: 'absolute',
@@ -35,7 +45,7 @@ const SingleBox = ({boxDetail}) => {
                  left: 0,
                  transform: 'translateX(-50%)',
                  width: '1px',
-                 height: '100%',
+                 height: 'calc(100% + 30px)',
                  backgroundColor: (theme) => theme.palette.secondary.main100,
                },
                '&::before': {
@@ -54,8 +64,8 @@ const SingleBox = ({boxDetail}) => {
                },
              }}>
                <PStack>
-                 <PTypography sx={{ fontWeight: 600, color: (theme) => theme.palette.text.main50 }}>{boxData?.course}</PTypography>
-                 <PTypography sx={{fontSize: 13}}>{boxData?.description}</PTypography>
+                 <PTypography sx={{ fontWeight: 600, color: (theme) => theme.palette.text.main50, mb: "5px" }}>{boxData?.course}</PTypography>
+                 <PTypography sx={{fontSize: 13, fontWeight: 500}}>{boxData?.description}</PTypography>
                </PStack>
              </PGridItem>
            </PGridContainer>

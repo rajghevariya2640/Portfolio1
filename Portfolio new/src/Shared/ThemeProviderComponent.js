@@ -7,7 +7,7 @@ const ThemeContext = React.createContext()
 
 const ThemeProviderComponent = ({ children }) => {
   const [themeMode, setThemeMode] = useState('light')
-  const localPrimaryColor = localStorage.getItem
+
   const toggleTheme = () => {
     setThemeMode((prevMode) => {
       const mode = (prevMode === 'light') ? 'dark' : 'light'
@@ -24,7 +24,7 @@ const ThemeProviderComponent = ({ children }) => {
   const theme = themeMode === 'light' ? lightTheme : darkTheme
 
   return (
-    <ThemeContext.Provider value={{ toggleTheme}}>
+    <ThemeContext.Provider value={{toggleTheme}}>
       <ThemeProvider theme={theme}>
         {children}
       </ThemeProvider>

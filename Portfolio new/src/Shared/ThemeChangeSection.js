@@ -77,6 +77,7 @@ const ThemeChangeSection = () => {
   const handlePrimaryColor = (data) => {
     localStorage.setItem("primaryColor", JSON.stringify(data));
   };
+  
   return (
     <ThemeSectionWrapper>
       <PLink className="setting-btn" onClick={settingToggle}>
@@ -95,11 +96,16 @@ const ThemeChangeSection = () => {
                   sx={{
                     height: "30px",
                     width: "30px",
+                    padding: '2px',
                     borderRadius: "50%",
-                    border: "1px solid",
-                    borderColor: "transparent",
+                    outline: "2px solid",
                     backgroundColor: `${colorData.color}`,
-                    "&:hover": { borderColor: `${colorData.bcolor}` },
+                    outlineOffset: '2px',
+                    outlineColor: 'transparent',
+                    transition: 'all 0.2s ease-in-out',
+                    '&:hover': {
+                      outlineColor: `${colorData.color}`,
+                    },
                   }}
                 ></PBox>
               </PButton>

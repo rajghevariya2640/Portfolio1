@@ -11,7 +11,7 @@ import PBox from '../Shared/PBox'
 const Resume = () => {
   return (
     <PageLayout pageHeading='Resume' subHeading='12 Years of Experience'>
-      <PGridContainer spacing={6}>
+      <PGridContainer rowSpacing={1.5} columnSpacing={6}>
         <PGridItem xs={12} md={8}>
           <Education/>
         </PGridItem>
