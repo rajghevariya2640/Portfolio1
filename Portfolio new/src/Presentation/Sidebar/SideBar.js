@@ -1,23 +1,19 @@
 import styled from "@emotion/styled";
-import { Button, InputAdornment, Switch } from "@mui/material";
-import React, { useContext, useState } from "react";
+import { InputAdornment } from "@mui/material";
+import React from "react";
 import PBox from "../../Shared/PBox";
+import PLink from "../../Shared/PLink";
 import PList from "../../Shared/PList";
 import PListItem from "../../Shared/PListItem";
 import PStack from "../../Shared/PStack";
 import PTextfield from "../../Shared/PTextfield";
 import PTypography from "../../Shared/PTypography";
-import PLink from "../../Shared/PLink";
+import { theme } from "../../Theme/Theme";
 import PersonalImg from "../../assets/images/png/About/personalImage.jpeg";
+import Facebook from "../../assets/images/svg/Facebook";
+import LinkedIn from "../../assets/images/svg/LinkedIn";
 import Search from "../../assets/images/svg/Serch";
 import Twitter from "../../assets/images/svg/Twitter";
-import LinkedIn from "../../assets/images/svg/LinkedIn";
-import Facebook from "../../assets/images/svg/Facebook";
-import { ThemeContext } from "../../Shared/ThemeProviderComponent";
-import { theme } from "../../Theme/Theme";
-import Setting from "../../assets/images/svg/Setting";
-import PButton from "../../Shared/PButton";
-import ThemeSwitch from "../../Shared/ThemeSwitch";
 
 const SideBarWrapper = styled(PStack)(({ theme }) => ({
   position: "fixed",
@@ -29,7 +25,7 @@ const SideBarWrapper = styled(PStack)(({ theme }) => ({
   padding: "30px 0 15px",
   overflow: "auto",
   "& .MuiStack-root:has(img)": {
-    margin: "0 20px 28px",
+    margin: "0 14px 28px",
     "& .MuiBox-root": {
       margin: "0 auto",
     },
@@ -165,8 +161,8 @@ const SideBar = () => {
         <PBox maxWidth={{ xs: "60px" }}>
           <img src={PersonalImg} alt="Personal pic" />
         </PBox>
-        <PTypography variant="h4" fontWeight={600}>
-          Alex Smith
+        <PTypography variant="h4" fontWeight={600} textTransform="capitalize">
+          Raj ghevariya
         </PTypography>
       </PStack>
       <PList sx={{ marginBottom: "22px" }}>

@@ -30,7 +30,7 @@ const SingleBox = ({boxDetail}) => {
                paddingRight: '25px',
              }}>
                <PStack alignItems='end'>
-                 <PTypography sx={{ fontSize: 14, fontWeight: 600, color: (theme) => theme.palette.text.main50 }}>{ boxData?.year}</PTypography>
+                 <PTypography variant="body2" sx={{ fontWeight: 600, color: (theme) => theme.palette.text.main50 }}>{ boxData?.year}</PTypography>
                  <PTypography sx={{fontSize: 12, fontWeight: 500, color: (theme) => theme.palette.text.mainAAA}}>{boxData?.univercity}</PTypography>
                </PStack>
              </PGridItem>

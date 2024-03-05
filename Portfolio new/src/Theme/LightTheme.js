@@ -1,7 +1,7 @@
 import { createTheme } from '@mui/material';
 import { dark222 } from './DarkTheme';
 import { theme } from "./Theme.js";
-const white = '#fff'
+const white = '#ffffff'
 
 const primaryColor = JSON.parse(localStorage.getItem("primaryColor"));
 
@@ -11,28 +11,29 @@ export const lightTheme = createTheme({
     mode: 'light',
     primary: {
       main: primaryColor || '#0099e5'
+      
     },
     white: {
-      main: '#fff'
+      main: white
     },
     dark: {
-      main: '#000'
+      main: '#000000'
     },
     secondary: {
       main: white,
       main50: '#fcfcfc',
-      main100: '#eee',
+      main100: '#eeeeee',
       main200: white,
       main300: '#aeaeae',
       main400: '#fdfdfd',
       main500: white,
-      main600: '#eee',
+      main600: '#eeeeee',
     },
     text: {
-      main: '#666',
+      main: '#666666',
       main50: dark222,
       main100: dark222,
-      mainAAA: '#aaa',
+      mainAAA: '#aaaaaa',
     },
     border: {
       main: '#d5d5d5',
@@ -43,10 +44,13 @@ export const lightTheme = createTheme({
       main400: '#e5e5e5'
     },
     icon: {
-      main: '#888',
-      main50: '#ccc',
+      main: '#888888',
+      main50: '#cccccc',
       main100: dark222,
-    }
+    },
+    bg: {
+      main: white,
+    },
   },
   components: {
     ...theme.components,
@@ -54,7 +58,7 @@ export const lightTheme = createTheme({
       styleOverrides: {
         body: {
           backgroundColor: '#f5f5f5',
-          color: '#666',
+          color: '#666666',
           overflowX: 'hidden'
         }
       }

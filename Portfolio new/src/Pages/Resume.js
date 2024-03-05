@@ -1,12 +1,11 @@
 import React from 'react'
-import PageLayout from '../Shared/PageLayout'
-import Education from '../Presentation/Resume/Education'
-import DesignSkill from '../Presentation/Resume/DesignSkill'
-import Experience from '../Presentation/Resume/Experience'
 import CodingSkill from '../Presentation/Resume/CodingSkill'
+import DesignSkill from '../Presentation/Resume/DesignSkill'
+import Education from '../Presentation/Resume/Education'
+import Experience from '../Presentation/Resume/Experience'
 import PGridContainer from '../Shared/PGridContainer'
 import PGridItem from '../Shared/PGridItem'
-import PBox from '../Shared/PBox'
+import PageLayout from '../Shared/PageLayout'
 
 const Resume = () => {
   return (

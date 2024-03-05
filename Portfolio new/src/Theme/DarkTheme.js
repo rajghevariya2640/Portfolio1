@@ -1,14 +1,23 @@
 import { createTheme } from '@mui/material'
 import {theme} from "./Theme.js"
-export const dark222 = '#222'
-export const dark333 = '#333'
-export const dark444 = '#444'
-export const dark555 = '#555'
-export const dark666 = '#666'
+import { useEffect, useState } from 'react'
+export const dark222 = '#222222'
+export const dark333 = '#333333'
+export const dark444 = '#444444'
+export const dark555 = '#555555'
+export const dark666 = '#666666'
 export const greyd5 = '#d5d5d5'
 
-const primaryColor = JSON.parse(localStorage.getItem("primaryColor"));
 
+//  const usePrimaryColor = () => {
+//   const [primary, setPrimary] = useState()
+//     useEffect(() => {
+//       const primaryColor = JSON.parse(localStorage.getItem("primaryColor"));
+//       setPrimary(primaryColor)
+//     }, [primary]);
+//   return primary
+// }
+const primaryColor = JSON.parse(localStorage.getItem("primaryColor"));
 export const darkTheme = createTheme({
 
   palette: {
@@ -47,17 +56,20 @@ export const darkTheme = createTheme({
       main400: dark555,
     },
     icon: {
-      main: '#aaa',
-      main50: '#ccc',
-      main100: '#ccc',
-    }
+      main: '#aaaaaa',
+      main50: '#cccccc',
+      main100: '#cccccc',
+    },
+    bg: {
+      main: dark333,
+    },
   },
   components: {
     ...theme.components,
      MuiCssBaseline: {
       styleOverrides: {
         body: {
-          backgroundColor: '#000',
+          backgroundColor: '#000000',
           color: '#d5d5d5',
           overflowX: 'hidden'
 

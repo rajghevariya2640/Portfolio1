@@ -11,10 +11,10 @@ const SingleProcess = ({processData}) => {
          return (
            <PStack key={processIndex} mt="15px">
              <PStack direction='row' justifyContent='space-between'>
-               <PTypography sx={{fontSize: '13px',textTransform: 'capitalize', fontWeight: 600, color: (theme) => theme.palette.text.main50}}>
+               <PTypography sx={{fontSize: 13,textTransform: 'capitalize', fontWeight: 600, color: (theme) => theme.palette.text.main50}}>
                  {process?.lable}
                </PTypography>
-               <PTypography sx={{fontSize: '11px', color: (theme) => theme.palette.text.mainAAA}}>
+               <PTypography sx={{fontSize: 11, color: (theme) => theme.palette.text.mainAAA}}>
                  {`${process?.value}%`}
                </PTypography>
              </PStack>

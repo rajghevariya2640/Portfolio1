@@ -17,7 +17,7 @@ const SingleWork = ({ singleWork }) => {
                     <PBox>{sWork?.icon}</PBox>
                     <PStack gap={1}>
                         <PTypography variant="h6" sx={{color: (theme) => theme.palette.text.main50}}>{sWork?.lable}</PTypography>
-                        <PTypography sx={{fontSize: 14}}>{ sWork?.description}</PTypography>
+                        <PTypography variant="body2">{ sWork?.description}</PTypography>
                     </PStack>
             </PStack>
           </SingleWorkWrapper>

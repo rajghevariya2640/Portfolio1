@@ -49,7 +49,6 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 }));
 const ThemeSwitch = ({ onChange }) => {
   const switchValue = localStorage.getItem("themeMode")
-  console.log(switchValue)
   return (
      <FormControlLabel
         control={<MaterialUISwitch sx={{ m: 1 }} onChange={onChange} defaultChecked={switchValue==="dark"?true:false}/>}

@@ -1,5 +1,4 @@
 import React from 'react'
-import { theme } from '../Theme/Theme'
 import PTypography from './PTypography'
 
 const PSubHead = ({title}) => {

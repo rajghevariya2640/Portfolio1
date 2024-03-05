@@ -9,7 +9,11 @@ export const theme = createTheme({
           fontWeight: 700,
           lineHeight: '1'
         },
-        h2: {},
+        h2: {
+          fontSize: 42,
+          fontWeight: 600,
+          lineHeight: '1'
+        },
         h3: {
           fontSize: 30
         },
@@ -26,6 +30,9 @@ export const theme = createTheme({
           fontSize: 18,
           lineHeight: '1',
           fontWeight: 600
+        },
+        body2: {
+          fontSize: '14px',
         }
       }
     },

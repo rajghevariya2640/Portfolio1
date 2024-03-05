@@ -84,18 +84,18 @@ const Testimonial = () => {
                 <PStack sx={{marginLeft: '60px'}}>
                   <PBox>
                     <PTypography
+                      variant="body2"
                       sx={{
                         color: (theme) => theme.palette.text.main,
                         fontWeight: 600,
                         fontStyle: "italic",
-                        fontSize: 14,
                       }}
                     >
                       {testimonial?.review}
                     </PTypography>
                   </PBox>
                   <PStack sx={{marginLeft: '30px', marginTop: '10px'}}>
-                    <PTypography sx={{fontWeight: 600, fontSize: 14, color: (theme) => theme.palette.text.main100}}>{testimonial?.name}</PTypography>
+                    <PTypography variant="body2" sx={{fontWeight: 600, color: (theme) => theme.palette.text.main100}}>{testimonial?.name}</PTypography>
                     <PTypography sx={{fontSize: 11, color: (theme) => theme.palette.primary.main}}>{testimonial?.occupation}</PTypography>
                   </PStack>
                 </PStack>

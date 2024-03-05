@@ -32,8 +32,7 @@ const AboutMainWrapper = styled(PStack)(({ theme }) => ({
       maxWidth: 300,
       margin: 0,
     },
-    "& .MuiTypography-body1": {
-      fontSize: 14,
+    "& .MuiTypography-body2": {
       fontWeight: 500,
       lineHeight: '1.75',
     },
@@ -68,7 +67,7 @@ const AboutMain = () => {
     <AboutMainWrapper direction="row">
       <PBox />
       <PStack>
-        <PStack>
+        <PStack gap={0.5}>
           <PSwiper
             autoplay={{
               delay: 2500,
@@ -85,8 +84,8 @@ const AboutMain = () => {
                       color: theme.palette.secondary.main300,
                       backgroundColor: (theme) => theme.palette.secondary.main50,
                       display: "inline",
-                      fontSize: 14,
                     }}
+                    variant="body2"
                   >
                     {data?.lable}
                   </PTypography>
@@ -94,17 +93,17 @@ const AboutMain = () => {
               );
             })}
           </PSwiper>
-          <PTypography variant="h1">Alex Smith</PTypography>
+          <PTypography variant="h1" textTransform="capitalize">Raj ghevariya</PTypography>
         </PStack>
         <PStack gap={1.5}>
-          <PTypography>
+          <PTypography variant="body2">
             Praesent sed aliquam arcu, non accumsan neque. In odio ante,
             vulputate ac magna vel, pharetra lobortis quam. Duis enim tortor,
             egestas et felis id, lobortis malesuada magna. Nunc sit amet
             sagittis nisi, eu semper nisl. Cras ut dictum nisl. Donec tincidunt
             eget orci.
           </PTypography>
-          <PTypography>
+          <PTypography variant="body2">
             Aliquam mollis, leo nec commodo facilisis, turpis lorem dapibus
             erat, sed consectetur nunc nulla ac elit. Suspendisse dictum id dui
             mollis auctor. Etiam id sapien neque. Cras nec rhoncus sem. Mauris
