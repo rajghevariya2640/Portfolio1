@@ -1,13 +1,20 @@
 import { createTheme } from '@mui/material'
 
 export const theme = createTheme({
+  // breakpoints: {
+  //   sm: 768,
+  //   md: 991
+  // },
   components: {
     MuiTypography: {
       styleOverrides: {
         h1: {
           fontSize: 48,
           fontWeight: 700,
-          lineHeight: '1'
+          lineHeight: '1',
+          '@media screen and (max-width: 1280px)': {
+            fontSize: 40
+          }
         },
         h2: {
           fontSize: 42,
@@ -32,7 +39,7 @@ export const theme = createTheme({
           fontWeight: 600
         },
         body2: {
-          fontSize: '14px',
+          fontSize: '14px'
         }
       }
     },

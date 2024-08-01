@@ -1,15 +1,16 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
-import PLink from "./PLink";
+import styled from "@emotion/styled";
+import React, { useContext, useEffect, useState } from "react";
+import Draggable from "react-draggable";
+import DarkThemeProvider from "../Theme/DarkTheme";
 import Setting from "../assets/images/svg/Setting";
 import PBox from "./PBox";
-import ThemeSwitch from "./ThemeSwitch";
-import PStack from "./PStack";
 import PButton from "./PButton";
+import PStack from "./PStack";
 import { ThemeContext } from "./ThemeProviderComponent";
-import styled from "@emotion/styled";
-import Draggable from "react-draggable";
+import ThemeSwitch from "./ThemeSwitch";
 
 const ThemeSectionWrapper = styled(PBox)(({ theme }) => ({
+  cursor: "grab",
   "& .react-draggable": {
     position: "relative",
     zIndex: 2,
@@ -23,9 +24,6 @@ const ThemeSectionWrapper = styled(PBox)(({ theme }) => ({
     "& svg": {
       verticalAlign: "middle",
       animation: "rotate 5s linear infinite",
-    },
-    '&:hover': {
-      cursor: 'pointer',
     },
   },
   "@keyframes rotate": {
@@ -47,59 +45,63 @@ const ThemeSectionWrapper = styled(PBox)(({ theme }) => ({
     borderRadius: "5px 0 0 5px",
     width: 200,
     "&.active": {
-      right: 4,
+      right: 0,
     },
   },
 }));
 
-const ThemeChangeSection = () => {
+const ThemeChangeSection = ({ setColor }) => {
   const { toggleTheme } = useContext(ThemeContext);
   const [isActive, setIsActive] = useState(false);
-  const sectionRef = useRef(null);
 
   const settingToggle = () => {
     setIsActive(!isActive);
   };
-  const handleClickOutside = (e) => {
-    if (sectionRef.current) {
-      setIsActive(false)
-    }
-  }
 
   const colorPalette = [
     {
-      color: "#74E291",
+      color: "#0099e5",
+    },
+    {
+      color: "#34c7a9",
     },
     {
       color: "#FFD23F",
     },
     {
-      color: "#FF6868",
+      color: "#a878ff",
     },
     {
-      color: "#0099e5",
+      color: "#ff99cc",
+    },
+    {
+      color: "#E53153",
+    },
+    {
+      color: "#FF9F54",
     },
   ];
 
   const handlePrimaryColor = (data) => {
     localStorage.setItem("primaryColor", JSON.stringify(data));
-    window.location?.reload()
+    setColor(data);
   };
 
   return (
-    <ThemeSectionWrapper onClick={handleClickOutside}>
-      <Draggable axis="y" bounds={{ top: 0, bottom: 669 }} defaultPosition={{x: 0, y: 100}}>
+    <ThemeSectionWrapper>
+      <Draggable
+        axis="y"
+        bounds={{ top: 0, bottom: 624 }}
+        defaultPosition={{ x: 0, y: 100 }}
+      >
         <PBox>
           <PBox position="absolute" zIndex="1" right="4px" width="fit-content">
             <PBox className="setting-btn" onClick={settingToggle}>
               <Setting />
             </PBox>
-            <PBox
-              ref={sectionRef}
-              className={`${isActive ? "active" : ""} setting-box`}
-            >
+            <PBox className={`${isActive ? "active" : ""} setting-box`}>
               <ThemeSwitch onChange={toggleTheme} />
-              <PStack direction="row" gap={1.5} mt={2}>
+              <PStack direction="row" gap={1.5} mt={2} flexWrap="wrap">
                 {colorPalette?.map((colorData, colorIndex) => {
                   return (
                     <PButton

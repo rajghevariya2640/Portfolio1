@@ -16,18 +16,31 @@ const AboutMainWrapper = styled(PStack)(({ theme }) => ({
   marginLeft: "-70px",
   marginRight: "-70px",
   marginTop: "-70px",
+    [theme.breakpoints.down("md")]: {
+      margin: 0,
+    flexDirection: 'column',
+  },
   "& .MuiBox-root": {
     background: `url('${PersonalImg}')`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     width: "50%",
-    filter: 'brightness(1.1)'
+    filter: 'brightness(1.1)',
+    [theme.breakpoints.down("md")]: {
+      width: '100%',
+      height: 425
+    },
   },
   "& .MuiStack-root:has( > .MuiStack-root)": {
     width: "50%",
     padding: "80px 7.25%",
     backgroundColor: theme.palette.secondary.main50,
-    gap: "30px 0",
+    gap: "30px 0",  
+    [theme.breakpoints.down("md")]: {
+      width: '100%',
+      padding: ' 30px 0',
+      backgroundColor: 'transparent'
+    },
     "& .swiper": {
       maxWidth: 300,
       margin: 0,

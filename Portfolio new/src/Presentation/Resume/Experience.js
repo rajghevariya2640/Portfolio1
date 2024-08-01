@@ -5,7 +5,7 @@ import SingleBox from './SingleBox'
 const Experience = () => {
   const detail = [
     {
-      year: '2016 - Curren',
+      year: '2016 - Current',
       univercity: 'Google',
       course: 'Lead Ui/Ux Designer',
       description: 'Praesent dignissim sollicitudin justo, sed elementum quam lacinia quis. Phasellus eleifend tristique posuere. Sed vitae dui nec magna.'

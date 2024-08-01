@@ -8,7 +8,6 @@ import Shop from '../../../assets/images/svg/Shop'
 import Pen from '../../../assets/images/svg/Pen'
 import LaptopMobile from '../../../assets/images/svg/LaptopPhone'
 import ManagementIcon from '../../../assets/images/svg/Management'
-import { darkTheme } from '../../../Theme/DarkTheme'
 import PBox from '../../../Shared/PBox'
 
 const WorkWrapper = styled(PStack)(({ theme }) => ({
@@ -44,7 +43,7 @@ const Work = () => {
     <WorkWrapper>
       <PSubHead title='What i do' />
       <PBox sx={{marginTop: 6}}>
-        <PGridContainer rowSpacing={8} columnSpacing={6}>
+        <PGridContainer rowSpacing={{xs: 4, sm: 6,lg: 8}} columnSpacing={{xs: 4,sm: 6}}>
           <SingleWork singleWork={workData} />
         </PGridContainer>
       </PBox>

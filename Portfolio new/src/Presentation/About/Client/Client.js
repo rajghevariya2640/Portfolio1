@@ -65,12 +65,27 @@ const Client = () => {
   return (
     <ClientWrapper>
           <PSubHead title='Clients' />
-          <PSwiper slidesPerView={5}
+          <PSwiper
               spaceBetween={10}
               navigation={{
                         nextEl: '.clientNext',
                         prevEl: '.clientPrev',
-                    }}modules={[Navigation]}>
+              }} modules={[Navigation]}
+              breakpoints={{
+                    900:{
+                        slidesPerView: 5,
+                    },
+                    600:{
+                        slidesPerView: 4,
+                    },
+                    485:{
+                        slidesPerView: 3,
+                    },
+                    0:{
+                        slidesPerView: 2,
+                    },
+                }}
+          >
               <PNavigation prevClass="clientPrev" nextClass="clientNext" color={(theme) => theme.palette.secondary.main200} />
               {
                   clients?.map((client,clientIndex) => {

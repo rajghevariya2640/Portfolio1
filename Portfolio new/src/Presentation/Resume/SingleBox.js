@@ -4,6 +4,7 @@ import PStack from '../../Shared/PStack'
 import PGridContainer from '../../Shared/PGridContainer'
 import PGridItem from '../../Shared/PGridItem'
 import PTypography from '../../Shared/PTypography'
+import PBox from '../../Shared/PBox'
 
 const BoxMain = styled(PStack)(({ theme }) => ({
   marginTop: '40px',
@@ -31,7 +32,14 @@ const SingleBox = ({boxDetail}) => {
              }}>
                <PStack alignItems='end'>
                  <PTypography variant="body2" sx={{ fontWeight: 600, color: (theme) => theme.palette.text.main50 }}>{ boxData?.year}</PTypography>
-                 <PTypography sx={{fontSize: 12, fontWeight: 500, color: (theme) => theme.palette.text.mainAAA}}>{boxData?.univercity}</PTypography>
+                 <PTypography sx={{ fontSize: 12, fontWeight: 500, color: (theme) => theme.palette.text.mainAAA }}>{boxData?.univercity}</PTypography>
+                 {
+                   boxData?.image && (
+                     <PBox maxHeight="40px" maxWidth="135px" marginTop="8px">
+                       <img src={boxData.image} alt="" />
+                     </PBox>
+                   )
+                 }
                </PStack>
              </PGridItem>
              <PGridItem md={8.5} className="" sx={{

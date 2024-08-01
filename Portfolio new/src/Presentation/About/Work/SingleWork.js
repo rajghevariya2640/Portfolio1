@@ -12,7 +12,7 @@ const SingleWork = ({ singleWork }) => {
     <>
       {singleWork?.map((sWork, sWorkIndex) => {
         return (
-          <SingleWorkWrapper xs={12} md={6} key={sWorkIndex}>
+          <SingleWorkWrapper xs={12} sm={6} key={sWorkIndex}>
             <PStack direction="row" gap={3}>
                     <PBox>{sWork?.icon}</PBox>
                     <PStack gap={1}>

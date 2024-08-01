@@ -26,6 +26,9 @@ const TestimonialWrapper = styled(PBox)(({ theme }) => ({
     borderRadius: "50%",
     overflow: "hidden",
     marginTop: -60,
+    "& img": {
+      verticalAlign: "middle",
+    },
   },
   "& .MuiBox-root:has( > .MuiTypography-root)": {
     border: `1px solid ${theme.palette.border.main300}`,
@@ -71,6 +74,17 @@ const Testimonial = () => {
           prevEl: ".testimonialPrev",
         }}
         modules={[Navigation]}
+        breakpoints={{
+          1200: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 1,
+          },
+          0: {
+            slidesPerView: 1,
+          },
+        }}
       >
         <PNavigation
           prevClass="testimonialPrev"
@@ -81,7 +95,7 @@ const Testimonial = () => {
           return (
             <SwiperSlide key={testimonialIndex}>
               <PStack>
-                <PStack sx={{marginLeft: '60px'}}>
+                <PStack sx={{ marginLeft: "60px" }}>
                   <PBox>
                     <PTypography
                       variant="body2"
@@ -94,9 +108,25 @@ const Testimonial = () => {
                       {testimonial?.review}
                     </PTypography>
                   </PBox>
-                  <PStack sx={{marginLeft: '30px', marginTop: '10px'}}>
-                    <PTypography variant="body2" sx={{fontWeight: 600, color: (theme) => theme.palette.text.main100}}>{testimonial?.name}</PTypography>
-                    <PTypography sx={{fontSize: 11, color: (theme) => theme.palette.primary.main}}>{testimonial?.occupation}</PTypography>
+                  <PStack sx={{ marginLeft: "30px", marginTop: "10px" }}>
+                    <PTypography
+                      variant="body2"
+                      sx={{
+                        fontWeight: 600,
+                        color: (theme) => theme.palette.text.main100,
+                      }}
+                    >
+                      {testimonial?.name}
+                    </PTypography>
+                    <PTypography
+                      sx={{
+                        fontSize: 11,
+                        fontWeight: 500,
+                        color: (theme) => theme.palette.primary.main,
+                      }}
+                    >
+                      {testimonial?.occupation}
+                    </PTypography>
                   </PStack>
                 </PStack>
                 <PBox>

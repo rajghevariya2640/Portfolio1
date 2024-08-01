@@ -10,7 +10,7 @@ const LaptopMain = styled('svg')(({ theme }) => ({
 const LaptopPhone = () => {
   return (
     <LaptopMain
-      height='42px'
+      width='42px'
       version='1.1'
       id='Capa_1'
       xmlns='http://www.w3.org/2000/svg'
