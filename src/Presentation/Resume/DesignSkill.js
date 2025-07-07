@@ -6,20 +6,24 @@ const DesignSkill = () => {
 
   const processDetail = [
     {
-      lable: 'web design',
+      lable: 'HTML',
+      value: '96'
+    },
+    {
+      lable: 'CSS',
       value: '95'
     },
     {
-      lable: 'print design',
-      value: '65'
+      lable: 'Tailwind',
+      value: '93'
     },
     {
-      lable: 'logo design',
-      value: '80'
-    },
-    {
-      lable: 'graphic design',
+      lable: 'Material UI',
       value: '90'
+    },
+    {
+      lable: 'Bootstrap',
+      value: '95'
     }
   ]
 

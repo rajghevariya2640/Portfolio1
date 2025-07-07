@@ -10,15 +10,15 @@ const ContactInfo = () => {
   const contactData = [
     {
       icon: <Phone />,
-      description: '415-832-2000'
+      description: '+91 8200729165'
     },
     {
       icon: <Location />,
-      description: 'San Francisco'
+      description: 'India'
     },
     {
       icon: <Mail />,
-      description: 'hello@example.com'
+      description: 'rajghevariya40@gmail.com'
     },
     {
       icon: <Correct />,

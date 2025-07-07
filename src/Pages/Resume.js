@@ -9,7 +9,7 @@ import PageLayout from '../Shared/PageLayout'
 
 const Resume = () => {
   return (
-    <PageLayout pageHeading='Resume' subHeading='12 Years of Experience'>
+    <PageLayout pageHeading='Resume' subHeading='2.5 Years of Experience'>
       <PGridContainer rowSpacing={1.5} columnSpacing={6}>
         <PGridItem xs={12} md={8}>
           <Education/>

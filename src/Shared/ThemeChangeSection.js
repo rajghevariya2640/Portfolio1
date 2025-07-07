@@ -91,7 +91,7 @@ const ThemeChangeSection = ({ setColor }) => {
     <ThemeSectionWrapper>
       <Draggable
         axis="y"
-        bounds={{ top: 0, bottom: 624 }}
+        bounds={{ top: 0, bottom: 620 }}
         defaultPosition={{ x: 0, y: 100 }}
       >
         <PBox>

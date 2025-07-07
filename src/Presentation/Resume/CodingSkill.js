@@ -9,25 +9,17 @@ const CodingSkill = () => {
       value: '85'
     },
     {
-      lable: 'PHP',
-      value: '70'
+      lable: 'JQuery',
+      value: '90'
     },
     {
-      lable: 'python',
-      value: '60'
+      lable: 'React',
+      value: '50'
     },
     {
       lable: 'perl',
       value: '75'
     },
-    {
-      lable: 'HTML / CSS',
-      value: '98'
-    },
-    {
-      lable: 'Smarty / Twig',
-      value: '80'
-    }
   ]
 
   return (

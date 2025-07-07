@@ -17,29 +17,29 @@ import Twitter from "../../assets/images/svg/Twitter";
 import Hamburger from "hamburger-react";
 
 const SideBarIcon = styled(PStack)(({ theme }) => ({
-  display: 'none',
-  [theme.breakpoints.down('md')]: {
+  display: "none",
+  [theme.breakpoints.down("md")]: {
     position: "fixed",
     top: 0,
     left: 0,
     right: 0,
     backgroundColor: theme.palette.secondary.main,
-    padding: '10px',
+    padding: "10px",
     borderBottom: `1px solid ${theme.palette.border.main400}`,
     zIndex: 9,
-    display: 'flex',
-    '& .MuiBox-root': {
+    display: "flex",
+    "& .MuiBox-root": {
       border: `1px solid ${theme.palette.border.main400}`,
-      '& .hamburger-react': {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        gap: '4px',
-        height: '35px !important',
-        width: '35px !important',
-        '& div': {
-          position: 'unset !important'
+      "& .hamburger-react": {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: "4px",
+        height: "35px !important",
+        width: "35px !important",
+        "& div": {
+          position: "unset !important",
         },
       },
     },
@@ -57,13 +57,22 @@ const SideBarWrapper = styled(PStack)(({ theme }) => ({
   overflow: "auto",
   zIndex: 10,
   // transition: 'all 0.3s ease-in-out',
-  '&.open': {
-    left: '0',
+  "&::-webkit-scrollbar": { width: 4, position: "absolute", left: 0 },
+  "&::-webkit-scrollbar-thumb": {
+    backgroundColor: theme.palette.secondary.main300,
+    padding: 0,
+  },
+  "&::-webkit-scrollbar-track": {
+    backgroundColor: theme.palette?.white?.main,
+    padding: 0,
+  },
+  "&.open": {
+    left: "0",
   },
   [theme.breakpoints.down("md")]: {
     left: "-300px",
-    width: '100%',
-    maxWidth: '300px',
+    width: "100%",
+    maxWidth: "300px",
   },
   "& .MuiStack-root:has(img)": {
     margin: "0 14px 28px",
@@ -160,11 +169,11 @@ const SideBar = () => {
       to: "/portfolio",
       lable: "portfolio",
     },
-    {
-      id: "blog",
-      to: "/blog",
-      lable: "blog",
-    },
+    // {
+    //   id: "blog",
+    //   to: "/blog",
+    //   lable: "blog",
+    // },
     {
       id: "contact",
       to: "/contact",
@@ -175,11 +184,11 @@ const SideBar = () => {
       to: "/extra",
       lable: "Extra",
     },
-    {
-      id: "getItNow",
-      to: "/get-it-now",
-      lable: "get it now",
-    },
+    // {
+    //   id: "getItNow",
+    //   to: "/get-it-now",
+    //   lable: "get it now",
+    // },
   ];
 
   const socialIcon = [
@@ -209,10 +218,10 @@ const SideBar = () => {
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isActive]);
 
@@ -227,7 +236,7 @@ const SideBar = () => {
           />
         </PBox>
       </SideBarIcon>
-      <SideBarWrapper className={isActive ? 'open' : ''} ref={sidebarRef}>
+      <SideBarWrapper className={isActive ? "open" : ""} ref={sidebarRef}>
         <PStack gap={1.5}>
           <PBox maxWidth={{ xs: "60px" }}>
             <img src={PersonalImg} alt="Personal pic" />

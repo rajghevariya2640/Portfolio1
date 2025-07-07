@@ -7,16 +7,17 @@ import PGridItem from "../../Shared/PGridItem";
 import PLink from "../../Shared/PLink";
 import PStack from "../../Shared/PStack";
 import PTypography from "../../Shared/PTypography";
-import Img1 from "../../assets/images/png/Portfolio/Item1.png";
-import Img2 from "../../assets/images/png/Portfolio/Item2.png";
-import Img3 from "../../assets/images/png/Portfolio/Item3.png";
-import Img4 from "../../assets/images/png/Portfolio/Item4.png";
-import Img5 from "../../assets/images/png/Portfolio/Item5.png";
-import Img6 from "../../assets/images/png/Portfolio/Item6.png";
+import Img1 from "../../assets/images/png/Portfolio/agency.png";
+import Img2 from "../../assets/images/png/Portfolio/ai.png";
+import Img3 from "../../assets/images/png/Portfolio/educational.png";
+import Img4 from "../../assets/images/png/Portfolio/portfolio.png";
+import Img5 from "../../assets/images/png/Portfolio/crm.png";
+import Img6 from "../../assets/images/png/Portfolio/e-commerce.png";
 import File from "../../assets/images/svg/File";
 import Image from "../../assets/images/svg/Image";
 import Shooting from "../../assets/images/svg/Shooting";
 import Sound from "../../assets/images/svg/Sound";
+import TailwindIcon from "../../assets/images/svg/TailwindIcon";
 
 const GalleryMain = styled(PBox)(({ theme }) => ({
   "& .btn": {
@@ -37,61 +38,62 @@ const GalleryMain = styled(PBox)(({ theme }) => ({
   "& .image-wrapper": {
     display: "block",
     maxHeight: 345,
+    position: "relative",
     overflow: "hidden",
-    position: 'relative',
-    '& img': {
-      transition: 'all 0.3s ease-in-out'
+    "& img": {
+      transition: "all 15s ease-in-out",
     },
-    '&:hover': {
-      '& img': {
-        transform: 'scale(1.1)'
+    "&:hover": {
+      "& img": {
+        transform: "translateY(calc(-100% + 345px))",
       },
-      '& .MuiTypography-h6, & .MuiTypography-body2, & .MuiBox-root:has( > svg)': {
-        opacity: 1,
-        visibility: 'visible'
-      },
+      "& .MuiTypography-h6, & .MuiTypography-body2, & .MuiBox-root:has( > svg)":
+        {
+          opacity: 1,
+          visibility: "visible",
+        },
     },
-    '& .MuiTypography-h6': {
-      position: 'absolute',
+    "& .MuiTypography-h6": {
+      position: "absolute",
       top: 10,
       left: 10,
       backgroundColor: theme.palette.secondary.main,
       color: theme.palette.text.main50,
-      padding: '5px',
-      textTransform: 'capitalize',
+      padding: "5px",
+      textTransform: "capitalize",
       opacity: 0,
-      visibillity: 'hidden',
-      transition: 'all 0.3s ease-in-out'
+      visibillity: "hidden",
+      transition: "all 0.3s ease-in-out",
     },
-    '& .MuiTypography-body2': {
-      position: 'absolute',
+    "& .MuiTypography-body2": {
+      position: "absolute",
       bottom: 10,
       left: 10,
       fontSize: 11,
-      padding: '0 5px',
+      padding: "0 5px",
       borderRadius: 2,
       fontWeight: 500,
       backgroundColor: theme.palette.secondary.main,
       color: theme.palette.text.main50,
-      textTransform: 'capitalize',
+      textTransform: "capitalize",
       opacity: 0,
-      visibillity: 'hidden',
-      transition: 'all 0.3s ease-in-out'
+      visibillity: "hidden",
+      transition: "all 0.3s ease-in-out",
     },
-    '& .MuiBox-root:has( > svg)': {
-      position: 'absolute',
+    "& .MuiBox-root:has( > svg)": {
+      position: "absolute",
       top: 10,
       right: 10,
       height: 28,
       width: 28,
       backgroundColor: theme.palette.secondary.main,
       color: theme.palette.primary.main,
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      opacity: '0',
-      visibility: 'hidden',
-      transition: 'all 0.3s ease-in-out'
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      opacity: "0",
+      visibility: "hidden",
+      transition: "all 0.3s ease-in-out",
     },
   },
 }));
@@ -125,72 +127,67 @@ const Gallery = () => {
       lable: "all",
     },
     {
-      sortClass: ".media",
-      lable: "media",
+      sortClass: ".tailwind",
+      lable: "tailwind",
     },
     {
-      sortClass: ".mockups",
-      lable: "mockups",
+      sortClass: ".mui",
+      lable: "Material UI",
     },
     {
-      sortClass: ".soundCloud",
-      lable: "soundCloud",
-    },
-    {
-      sortClass: ".vimeo-video",
-      lable: "Vimeo video",
-    },
-    {
-      sortClass: ".youtube-video",
-      lable: "youtube video",
+      sortClass: ".bootstrap",
+      lable: "Bootstrap",
     },
   ];
 
   const galleryData = [
     {
       image: Img1,
-      sortClass: "soundCloud",
-      sortName: "sound Cloud",
-      smallLabel: 'soundCloud',
-      icon: <Sound />,
-      link: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/221650664&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'
+      sortClass: "tailwind",
+      sortName: "Agency Landing Page",
+      smallLabel: "Tailwind CSS",
+      icon: <TailwindIcon />,
+      link: "https://port-newin.netlify.app/",
     },
     {
       image: Img2,
-      sortClass: "media",
-      sortName: "media project 1",
-      smallLabel: 'media',
-      icon: <File/>,
+      sortClass: "bootstrap",
+      sortName: "AI Landing Page",
+      smallLabel: "Bootstrap",
+      icon: <File />,
+      link: "https://smartconvo.io/",
     },
     {
       image: Img3,
-      sortClass: "vimeo-video",
-      sortName: "vimeo video 1",
-      smallLabel: 'Vimeo videos',
-      icon: <Shooting />,
-      link: 'https://player.vimeo.com/video/158284739',
+      sortClass: "tailwind",
+      sortName: "Education Landing Page",
+      smallLabel: "Tailwind CSS",
+      icon: <TailwindIcon />,
+      link: "https://learnwithskillgrow.netlify.app/",
     },
     {
       image: Img4,
-      sortClass: "youtube-video",
-      sortName: "youtube video 1",
-      smallLabel: 'youtube videos',
+      sortClass: "bootstrap",
+      sortName: "Portfolio Landing Page",
+      smallLabel: "Bootstrap",
       icon: <Shooting />,
-      link: 'https://www.youtube.com/embed/bg0gv2YpIok',
+      link: "https://mone-nuxt.netlify.app/",
     },
     {
       image: Img5,
-      sortClass: "media",
-      sortName: "media project 1",
-      smallLabel: 'media',
-      icon: <File/>
+      sortClass: "mui",
+      sortName: "CRM Landing Page",
+      smallLabel: "Material UI",
+      icon: <File />,
+      link: "https://angular.hibootstrap.com/daxa/",
     },
     {
       image: Img6,
-      sortClass: "mockups",
-      sortName: "mockup design 1",
-      smallLabel: 'mockups',
-      icon: <Image />
+      sortClass: "bootstrap",
+      sortName: "E-commerce Landing Page",
+      smallLabel: "Bootstrap",
+      icon: <Image />,
+      link: "https://chawkbazar.vercel.app/",
     },
   ];
 
@@ -209,7 +206,11 @@ const Gallery = () => {
           );
         })}
       </PStack>
-      <div className="isotope-container" ref={isotopeContainer} style={{marginTop: '35px'}}>
+      <div
+        className="isotope-container"
+        ref={isotopeContainer}
+        style={{ marginTop: "35px" }}
+      >
         <PGridContainer spacing="14px">
           {galleryData?.map((gallery, galleryIndex) => {
             return (
@@ -219,14 +220,16 @@ const Gallery = () => {
                 md={4}
                 className={`isotope-item ${gallery?.sortClass}`}
               >
-                <PLink className="image-wrapper" to={gallery?.link}>
-                  <img src={gallery?.image} alt="" />
-                  <PTypography variant="h6">{gallery?.sortName}</PTypography>
-                  <PTypography variant="body2">{gallery?.smallLabel}</PTypography>
-                  <PBox>
-                    {gallery?.icon}
-                  </PBox>
-                </PLink>
+                <PBox className="image-wrapper">
+                  <PLink  to={gallery?.link}>
+                    <img src={gallery?.image} alt="" />
+                    <PTypography variant="h6">{gallery?.sortName}</PTypography>
+                    <PTypography variant="body2">
+                      {gallery?.smallLabel}
+                    </PTypography>
+                    <PBox>{gallery?.icon}</PBox>
+                  </PLink>
+                </PBox>
               </PGridItem>
             );
           })}

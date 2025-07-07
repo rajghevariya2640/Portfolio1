@@ -20,22 +20,22 @@ const Work = () => {
     {
       icon: <Shop />,
       lable: 'Ecommerce',
-      description: 'Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor bibendum massa, sit amet ultricies ex lectus scelerisque nibh. Ut non sodales odio.'
+      description: 'I design and develop ecommerce interfaces that drive sales and improve user engagement. From product listing pages to secure checkouts, I ensure smooth, responsive, and intuitive shopping experiences across all devices.'
     },
     {
       icon: <Pen />,
       lable: 'Copywriter',
-      description: 'Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor bibendum massa, sit amet ultricies ex lectus scelerisque nibh. Ut non sodales odio.'
+      description: 'I assist in structuring web content that not only reads well but also aligns with branding and SEO practices. My goal is to enhance the visual message through clear, concise, and strategic copy.'
     },
     {
       icon: <LaptopMobile />,
       lable: 'Web Design',
-      description: 'Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor bibendum massa, sit amet ultricies ex lectus scelerisque nibh. Ut non sodales odio.'
+      description: 'With a keen eye for aesthetics and usability, I craft clean, modern, and accessible UI designs. I focus on layout, typography, and visual hierarchy to create visually compelling and user-centered websites.'
     },
     {
       icon: <ManagementIcon />,
       lable: 'Management',
-      description: 'Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor bibendum massa, sit amet ultricies ex lectus scelerisque nibh. Ut non sodales odio.'
+      description: "I contribute to the planning and execution of frontend tasks by aligning with team goals, prioritizing UI issues, and ensuring deadlines are met with quality. I'm comfortable managing small-scale project flows in agile environments."
     }
   ]
 
